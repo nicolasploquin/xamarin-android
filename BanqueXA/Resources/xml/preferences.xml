@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  <TextPreference
+      android:key="pref_nom"
+      android:title="Nom"
+      android:summary="Nom par défaut"
+      android:defaultValue="Leblanc" />
+</PreferenceScreen>

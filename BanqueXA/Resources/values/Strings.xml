@@ -1,4 +1,16 @@
 <resources>
-    <string name="app_name">BanqueXA</string>
-    <string name="action_settings">Settings</string>
+  <string name="app_name">Banque XA</string>
+  <string name="action_settings">Settings</string>
+  <string name="main_label">Ma Banque Mobile</string>
+  <string name="main_description">Bienvenue dans l\'application Banque!</string>
+  <string name="main_customers_link">Clients</string>
+  <string name="main_customerform_link">Créer</string>
+  <string name="customers_label">Clients</string>
+  <string name="customerdetail_label">Client</string>
+  <string name="customerdetail_call_label">Appeler</string>
+  <string name="customerdetail_edit_label">Modifier</string>
+  <string name="customerform_label">Nouveau client</string>
+  <string name="clientform_nom_label">Nom</string>
+  <string name="clientform_prenom_label">Prénom</string>
+  <string name="clientform_tel_label">Téléphone</string>
 </resources>
