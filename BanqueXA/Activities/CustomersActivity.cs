@@ -2,7 +2,6 @@
 using Android.OS;
 using Android.Support.V7.App;
 using Android.Widget;
-using BanqueXA.Model;
 using BanqueXA.Services;
 
 namespace BanqueXA.Activities
@@ -13,7 +12,8 @@ namespace BanqueXA.Activities
     )]
     public class CustomersActivity : AppCompatActivity
     {
-        IBanqueAsyncService ds = BanqueInMemService.Instance;
+        IBanqueAsyncService ds = BanqueSqlService.Instance;
+        //IBanqueAsyncService ds = BanqueInMemService.Instance;
         //IBanqueAsyncService ds = BanqueRestService.Instance;
 
         protected async override void OnCreate(Bundle savedInstanceState)

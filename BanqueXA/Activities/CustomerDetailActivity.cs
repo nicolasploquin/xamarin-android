@@ -3,6 +3,7 @@ using Android.App;
 using Android.Content;
 using Android.Net;
 using Android.OS;
+using Android.Support.V7.App;
 using Android.Widget;
 using BanqueXA.Model;
 using BanqueXA.Services;
@@ -10,9 +11,10 @@ using BanqueXA.Services;
 namespace BanqueXA.Activities
 {
     [Activity(Label = "@string/customerdetail_label")]
-    public class CustomerDetailActivity : Activity
+    public class CustomerDetailActivity : AppCompatActivity
     {
-        IBanqueAsyncService ds = BanqueInMemService.Instance;
+        IBanqueAsyncService ds = BanqueSqlService.Instance;
+        //IBanqueAsyncService ds = BanqueInMemService.Instance;
         //IBanqueAsyncService ds = BanqueRestService.Instance;
 
         protected async override void OnCreate(Bundle savedInstanceState)

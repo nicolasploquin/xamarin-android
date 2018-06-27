@@ -21,7 +21,8 @@ namespace BanqueXA.Activities
     )]
     public class CustomerFormActivity : AppCompatActivity
     {
-        IBanqueAsyncService ds = BanqueInMemService.Instance;
+        IBanqueAsyncService ds = BanqueSqlService.Instance;
+        //IBanqueAsyncService ds = BanqueInMemService.Instance;
         //IBanqueAsyncService ds = BanqueRestService.Instance;
 
         protected async override void OnCreate(Bundle savedInstanceState)
