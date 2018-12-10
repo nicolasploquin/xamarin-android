@@ -1,16 +1,18 @@
-﻿using SQLite.Net.Attributes;
+﻿using SQLite;
 using System.Collections.Generic;
 using System.Linq;
 namespace BanqueXA.Model
 {
+    
     public class ClientData
     {
         [PrimaryKey, AutoIncrement]
         public long Id { get; set; }
 
+        
         private string nom = "";
         private string prenom = "";
-
+        
         public string Nom
         {
             get { return nom; }

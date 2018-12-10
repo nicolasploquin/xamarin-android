@@ -4,9 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using BanqueXA.Model;
-using SQLite.Net;
-using SQLite.Net.Async;
-using SQLite.Net.Platform.XamarinAndroid;
+using SQLite;
+
 
 namespace BanqueXA.Services
 {
@@ -23,7 +22,7 @@ namespace BanqueXA.Services
             }
         }
 
-        private Func<SQLiteConnectionWithLock> factory;
+        //private Func<SQLiteConnectionWithLock> factory;
         private SQLiteAsyncConnection cnx;
 
         private readonly string filename = "BanqueDB.db3";
@@ -40,13 +39,13 @@ namespace BanqueXA.Services
 //#endif
             var path = Path.Combine(libraryPath, filename);
 
-            factory = new Func<SQLiteConnectionWithLock>(
-                () => new SQLiteConnectionWithLock(
-                        new SQLitePlatformAndroid(),
-                        new SQLiteConnectionString(path, storeDateTimeAsTicks: false)
-                      )
-            );
-            cnx = new SQLiteAsyncConnection(factory);
+            //factory = new Func<SQLiteConnectionWithLock>(
+            //    () => new SQLiteConnectionWithLock(
+            //            new SQLitePlatformAndroid(),
+            //            new SQLiteConnectionString(path, storeDateTimeAsTicks: false)
+            //          )
+            //);
+            cnx = new SQLiteAsyncConnection(path);
 
             // Création de la table ClientData si nécessaire 
             cnx.CreateTableAsync<ClientData>();
