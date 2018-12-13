@@ -1,6 +1,6 @@
 ﻿using Android.App;
 using Android.OS;
-using Android.Support.V7.App;
+//using Android.Support.V7.App;
 using Android.Widget;
 using BanqueXA.Services;
 
@@ -10,7 +10,7 @@ namespace BanqueXA.Activities
         Label = "@string/customers_label", 
         ParentActivity = typeof(MainActivity)
     )]
-    public class CustomersActivity : AppCompatActivity
+    public class CustomersActivity : Activity
     {
         private IBanqueAsyncService ds = ServiceManager.DataStore;
 
@@ -19,6 +19,8 @@ namespace BanqueXA.Activities
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.activity_customers);
+
+            //ActionBar.SetDisplayHomeAsUpEnabled(true);
 
             ListView listView = FindViewById<ListView>(Resource.Id.customers_list);
             listView.Adapter = new CustomersAdapter(await ds.readAllAsync());

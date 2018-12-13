@@ -8,7 +8,7 @@ using Android.Content;
 using Android.OS;
 using Android.Preferences;
 using Android.Runtime;
-using Android.Support.V7.App;
+//using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using BanqueXA.Model;
@@ -18,9 +18,9 @@ namespace BanqueXA.Activities
 {
     [Activity(
         Label = "@string/customerform_label",
-        ParentActivity = typeof(MainActivity)
+        ParentActivity = typeof(CustomersActivity)
     )]
-    public class CustomerFormActivity : AppCompatActivity
+    public class CustomerFormActivity : Activity
     {
         private IBanqueAsyncService ds = ServiceManager.DataStore;
 
@@ -29,6 +29,8 @@ namespace BanqueXA.Activities
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.activity_customer_form);
+
+            //ActionBar.SetDisplayHomeAsUpEnabled(true);
 
             EditText editLastName = FindViewById<EditText>(Resource.Id.clientform_nom);
             EditText editFirstName = FindViewById<EditText>(Resource.Id.clientform_prenom);

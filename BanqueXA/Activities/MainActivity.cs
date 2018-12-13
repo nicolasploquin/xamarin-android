@@ -1,9 +1,9 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Views;
-using Android.Support.Design.Widget;
+//using Android.Support.V7.App;
+//using Android.Support.Design.Widget;
 
 namespace BanqueXA.Activities
 {
@@ -11,7 +11,7 @@ namespace BanqueXA.Activities
         Label = "@string/main_label",
         MainLauncher = true
     )]
-    public class MainActivity : AppCompatActivity
+    public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {

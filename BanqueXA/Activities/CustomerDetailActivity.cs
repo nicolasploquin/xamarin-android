@@ -3,15 +3,18 @@ using Android.App;
 using Android.Content;
 using Android.Net;
 using Android.OS;
-using Android.Support.V7.App;
+//using Android.Support.V7.App;
 using Android.Widget;
 using BanqueXA.Model;
 using BanqueXA.Services;
 
 namespace BanqueXA.Activities
 {
-    [Activity(Label = "@string/customerdetail_label")]
-    public class CustomerDetailActivity : AppCompatActivity
+    [Activity(
+        Label = "@string/customerdetail_label",
+        ParentActivity = typeof(CustomersActivity)
+    )]
+    public class CustomerDetailActivity : Activity
     {
         private IBanqueAsyncService ds = ServiceManager.DataStore;
 
@@ -20,6 +23,8 @@ namespace BanqueXA.Activities
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.activity_customer_detail);
+
+            //ActionBar.SetDisplayHomeAsUpEnabled(true);
 
             Client client = await ds.readAsync(Intent.GetLongExtra("id",-1));
             

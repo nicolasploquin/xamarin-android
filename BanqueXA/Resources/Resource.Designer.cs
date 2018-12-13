@@ -3206,9 +3206,6 @@ namespace BanqueXA
 			// aapt resource value: 0x7f0b017a
 			public const int AppTheme = 2131427706;
 			
-			// aapt resource value: 0x7f0b017b
-			public const int AppTheme_Base = 2131427707;
-			
 			// aapt resource value: 0x7f0b00a3
 			public const int Base_AlertDialog_AppCompat = 2131427491;
 			
