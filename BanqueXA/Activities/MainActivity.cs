@@ -23,21 +23,24 @@ namespace BanqueXA.Activities
             FindViewById<Button>(Resource.Id.main_nav_customers).Click += (sender, e) => {
                 StartActivity(typeof(CustomersActivity));
             };
+            FindViewById<Button>(Resource.Id.main_nav_customerform).Click += (sender, e) => {
+                StartActivity(typeof(CustomerFormActivity));
+            }
             //FindViewById<FloatingActionButton>(Resource.Id.main_nav_customerform).Click += (sender, e) => {
             //    StartActivity(typeof(CustomerFormActivity));
             //};
 
 
-            //var sharedPreferences = GetSharedPreferences("MesPreferences",
-            //    Android.Content.FileCreationMode.Private);
+                //var sharedPreferences = GetSharedPreferences("MesPreferences",
+                //    Android.Content.FileCreationMode.Private);
 
-            //var sharedPreferencesEditor = sharedPreferences.Edit();
-            //sharedPreferencesEditor.PutString("nom", "Leblanc");
-            ////sharedPreferencesEditor.PutBoolean("EstActif", true);
-            ////sharedPreferencesEditor.PutFloat("MeilleurScore",23441.80f);
-            ////sharedPreferencesEditor.PutString("NomDeLApplication","Ma super appli !");
-            //sharedPreferencesEditor.Commit();
-        }
+                //var sharedPreferencesEditor = sharedPreferences.Edit();
+                //sharedPreferencesEditor.PutString("nom", "Leblanc");
+                ////sharedPreferencesEditor.PutBoolean("EstActif", true);
+                ////sharedPreferencesEditor.PutFloat("MeilleurScore",23441.80f);
+                ////sharedPreferencesEditor.PutString("NomDeLApplication","Ma super appli !");
+                //sharedPreferencesEditor.Commit();
+            }
 
 
         public override bool OnCreateOptionsMenu(IMenu menu)
