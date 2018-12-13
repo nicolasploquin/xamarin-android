@@ -13,7 +13,7 @@ using BanqueXA.Model;
 
 namespace BanqueXA.Services
 {
-    interface IBanqueAsyncService
+    public interface IBanqueAsyncService
     {
         void createAsync(Client client);
         Task<List<Client>> readAllAsync();

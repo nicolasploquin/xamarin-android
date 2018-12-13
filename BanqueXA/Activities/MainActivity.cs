@@ -23,9 +23,9 @@ namespace BanqueXA.Activities
             FindViewById<Button>(Resource.Id.main_nav_customers).Click += (sender, e) => {
                 StartActivity(typeof(CustomersActivity));
             };
-            FindViewById<FloatingActionButton>(Resource.Id.main_nav_customerform).Click += (sender, e) => {
-                StartActivity(typeof(CustomerFormActivity));
-            };
+            //FindViewById<FloatingActionButton>(Resource.Id.main_nav_customerform).Click += (sender, e) => {
+            //    StartActivity(typeof(CustomerFormActivity));
+            //};
 
 
             var sharedPreferences = GetSharedPreferences("MesPreferences",

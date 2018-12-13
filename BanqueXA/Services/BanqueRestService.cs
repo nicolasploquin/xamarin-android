@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 
 namespace BanqueXA.Services
 {
-    class BanqueRestService : IBanqueAsyncService
+    public class BanqueRestService : IBanqueAsyncService
     {
         private static BanqueRestService instance = null;
         public static BanqueRestService Instance

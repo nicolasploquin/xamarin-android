@@ -13,7 +13,7 @@ using BanqueXA.Model;
 
 namespace BanqueXA.Services
 {
-    interface IBanqueService
+    public interface IBanqueService
     {
         void create(Client client);
         List<Client> readAll();

@@ -4,7 +4,7 @@ using BanqueXA.Model;
 
 namespace BanqueXA.Services
 {
-    class BanqueInMemService : IBanqueService, IBanqueAsyncService
+    public class BanqueInMemService : IBanqueService, IBanqueAsyncService
     {
         private static BanqueInMemService instance = null;
         public static BanqueInMemService Instance {

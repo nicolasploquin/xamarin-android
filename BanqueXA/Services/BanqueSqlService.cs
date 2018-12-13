@@ -9,7 +9,7 @@ using SQLite;
 
 namespace BanqueXA.Services
 {
-    class BanqueSqlService : IBanqueAsyncService
+    public class BanqueSqlService : IBanqueAsyncService
     {
         private static BanqueSqlService instance = null;
         public static BanqueSqlService Instance

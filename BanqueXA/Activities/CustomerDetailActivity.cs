@@ -13,9 +13,7 @@ namespace BanqueXA.Activities
     [Activity(Label = "@string/customerdetail_label")]
     public class CustomerDetailActivity : AppCompatActivity
     {
-        IBanqueAsyncService ds = BanqueSqlService.Instance;
-        //IBanqueAsyncService ds = BanqueInMemService.Instance;
-        //IBanqueAsyncService ds = BanqueRestService.Instance;
+        private IBanqueAsyncService ds = ServiceManager.DataStore;
 
         protected async override void OnCreate(Bundle savedInstanceState)
         {

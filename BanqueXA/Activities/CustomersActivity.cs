@@ -12,9 +12,7 @@ namespace BanqueXA.Activities
     )]
     public class CustomersActivity : AppCompatActivity
     {
-        IBanqueAsyncService ds = BanqueSqlService.Instance;
-        //IBanqueAsyncService ds = BanqueInMemService.Instance;
-        //IBanqueAsyncService ds = BanqueRestService.Instance;
+        private IBanqueAsyncService ds = ServiceManager.DataStore;
 
         protected async override void OnCreate(Bundle savedInstanceState)
         {
