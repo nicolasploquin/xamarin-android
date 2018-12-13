@@ -13,14 +13,32 @@ using Android.Widget;
 
 namespace BanqueXA.Activities
 {
-    [Activity(Label = "@string/preferences_label")]
-    public class PrefsFragment : PreferenceFragment
+    [Activity(Label = "@string/prefs_label")]
+    public class PrefsActivity : PreferenceActivity
     {
-        public override void OnCreate(Bundle savedInstanceState)
+        protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             AddPreferencesFromResource(Resource.Xml.preferences);
+            
+
+            //FragmentManager
+            //    .BeginTransaction()
+            //    .Replace(Android.Resource.Id.Content, new PrefsFragment())
+            //    .Commit()
+            //    ;
+
         }
+
+        //private class PrefsFragment : PreferenceFragment
+        //{
+        //    public override void OnCreate(Bundle savedInstanceState)
+        //    {
+        //        base.OnCreate(savedInstanceState);
+
+        //        AddPreferencesFromResource(Resource.Xml.preferences);
+        //    }
+        //}
     }
 }

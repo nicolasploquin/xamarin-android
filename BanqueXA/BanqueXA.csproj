@@ -75,6 +75,7 @@
     <Compile Include="Activities\CustomersActivity.cs" />
     <Compile Include="Activities\CustomersAdapter.cs" />
     <Compile Include="Activities\MainActivity.cs" />
+    <Compile Include="Activities\PrefsFragment.cs" />
     <Compile Include="Model\ClientData.cs" />
     <Compile Include="Model\Client.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />

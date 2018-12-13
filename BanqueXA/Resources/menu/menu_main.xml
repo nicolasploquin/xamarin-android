@@ -1,17 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<!--For all properties see: http://developer.android.com/guide/topics/resources/menu-resource.html-->
-<menu 
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
-  <item android:id="@+id/action_creer"
-        android:title="@string/customerform_label"
+  <item android:id="@+id/action_create"
+        android:title="@string/action_customerform"
         android:icon="@android:drawable/ic_menu_add"
-        app:showAsAction="always|withText"
+        android:showAsAction="always"
         />
-  <item android:id="@+id/action_clients"
-        android:title="@string/customers_label"
-        app:showAsAction="never"
+  <item android:id="@+id/action_customers"
+        android:title="@string/action_customers"
+        android:icon="@android:drawable/ic_menu_add"
+        android:showAsAction="ifRoom"
+        />
+  <item android:id="@+id/action_prefs"
+        android:title="@string/prefs_label"
+        android:showAsAction="never"
         />
 
 </menu>

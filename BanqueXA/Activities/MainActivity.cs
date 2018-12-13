@@ -48,16 +48,17 @@ namespace BanqueXA.Activities
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            int id = item.ItemId;
-            if (id == Resource.Id.action_creer)
+            switch (item.ItemId)
             {
-                StartActivity(typeof(CustomerFormActivity));
-                return true;
-            }
-            else if (id == Resource.Id.action_clients)
-            {
-                StartActivity(typeof(CustomersActivity));
-                return true;
+                case Resource.Id.action_create:
+                    StartActivity(typeof(CustomerFormActivity));
+                    return true;
+                case Resource.Id.action_customers:
+                    StartActivity(typeof(CustomersActivity));
+                    return true;
+                case Resource.Id.action_prefs:
+                    StartActivity(typeof(PrefsActivity));
+                    return true;
             }
 
             return base.OnOptionsItemSelected(item);
