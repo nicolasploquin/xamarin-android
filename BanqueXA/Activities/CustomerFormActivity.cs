@@ -6,6 +6,7 @@ using System.Text;
 using Android.App;
 using Android.Content;
 using Android.OS;
+using Android.Preferences;
 using Android.Runtime;
 using Android.Support.V7.App;
 using Android.Views;
@@ -48,8 +49,9 @@ namespace BanqueXA.Activities
             else
             {
                 client = new Client();
-                var sharedPreferences = GetSharedPreferences("MesPreferences", FileCreationMode.Private);
-                editLastName.Text = sharedPreferences.GetString("nom", string.Empty);
+                
+                ISharedPreferences sharedPreferences = PreferenceManager.GetDefaultSharedPreferences(this);
+                editLastName.Text = sharedPreferences.GetString("prefs_nom", string.Empty);
             }
 
 

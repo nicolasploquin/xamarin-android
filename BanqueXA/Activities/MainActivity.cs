@@ -28,15 +28,15 @@ namespace BanqueXA.Activities
             //};
 
 
-            var sharedPreferences = GetSharedPreferences("MesPreferences",
-                Android.Content.FileCreationMode.Private);
+            //var sharedPreferences = GetSharedPreferences("MesPreferences",
+            //    Android.Content.FileCreationMode.Private);
 
-            var sharedPreferencesEditor = sharedPreferences.Edit();
-            sharedPreferencesEditor.PutString("nom", "Leblanc");
-            //sharedPreferencesEditor.PutBoolean("EstActif", true);
-            //sharedPreferencesEditor.PutFloat("MeilleurScore",23441.80f);
-            //sharedPreferencesEditor.PutString("NomDeLApplication","Ma super appli !");
-            sharedPreferencesEditor.Commit();
+            //var sharedPreferencesEditor = sharedPreferences.Edit();
+            //sharedPreferencesEditor.PutString("nom", "Leblanc");
+            ////sharedPreferencesEditor.PutBoolean("EstActif", true);
+            ////sharedPreferencesEditor.PutFloat("MeilleurScore",23441.80f);
+            ////sharedPreferencesEditor.PutString("NomDeLApplication","Ma super appli !");
+            //sharedPreferencesEditor.Commit();
         }
 
 

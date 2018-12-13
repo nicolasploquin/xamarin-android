@@ -4,7 +4,7 @@
   <PreferenceCategory android:title="Client">
     
       <TextPreference
-        android:key="pref_nom"
+        android:key="prefs_nom"
         android:title="Nom"
         android:summary="Nom par défaut"
         android:defaultValue="Leblanc" />
