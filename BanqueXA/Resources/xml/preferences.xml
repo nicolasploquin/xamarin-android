@@ -2,13 +2,18 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
   <PreferenceCategory android:title="Client">
-    
-      <TextPreference
-        android:key="prefs_nom"
+
+    <EditTextPreference
+      android:key="prefs_nom"
         android:title="Nom"
         android:summary="Nom par défaut"
         android:defaultValue="Leblanc" />
-  
+    <EditTextPreference
+        android:key="prefs_telephone"
+        android:title="Tél"
+        android:summary="Téléphone par défaut"
+        android:dialogTitle="0612345789"
+    />
   </PreferenceCategory>
 
 </PreferenceScreen>

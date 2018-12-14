@@ -23,9 +23,10 @@ namespace BanqueXA.Activities
             FindViewById<Button>(Resource.Id.main_nav_customers).Click += (sender, e) => {
                 StartActivity(typeof(CustomersActivity));
             };
-            FindViewById<Button>(Resource.Id.main_nav_customerform).Click += (sender, e) => {
+            FindViewById<Button>(Resource.Id.main_nav_customerform).Click += (sender, e) =>
+            {
                 StartActivity(typeof(CustomerFormActivity));
-            }
+            };
             //FindViewById<FloatingActionButton>(Resource.Id.main_nav_customerform).Click += (sender, e) => {
             //    StartActivity(typeof(CustomerFormActivity));
             //};
@@ -40,7 +41,7 @@ namespace BanqueXA.Activities
                 ////sharedPreferencesEditor.PutFloat("MeilleurScore",23441.80f);
                 ////sharedPreferencesEditor.PutString("NomDeLApplication","Ma super appli !");
                 //sharedPreferencesEditor.Commit();
-            }
+        }
 
 
         public override bool OnCreateOptionsMenu(IMenu menu)
