@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:stretchColumns="1"
     android:shrinkColumns="1"
-    android:padding="3dip">
+    android:padding="8dp">
     <TableRow>
         <TextView
             android:text="@string/clientform_nom_label"

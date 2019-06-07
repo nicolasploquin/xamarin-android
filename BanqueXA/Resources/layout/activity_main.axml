@@ -20,7 +20,8 @@
             android:id="@+id/main_nav_customerform"
             android:text="@string/customerform_label"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            />
     </LinearLayout>
 	<!--
     <android.support.design.widget.FloatingActionButton
@@ -30,5 +31,6 @@
         android:layout_alignEnd="@id/main_layout"
         android:layout_alignBottom="@id/main_layout"
         android:layout_margin="16dp"
+        android:layout_margin="@dimens/fab_margin"
         android:src="@android:drawable/ic_menu_edit" / -->
 </RelativeLayout>

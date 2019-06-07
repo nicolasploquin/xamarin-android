@@ -64,7 +64,6 @@ namespace BanqueXA.Activities
                     StartActivity(typeof(PrefsActivity));
                     return true;
             }
-
             return base.OnOptionsItemSelected(item);
         }
     }
