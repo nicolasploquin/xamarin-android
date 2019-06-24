@@ -74,6 +74,7 @@
     <Compile Include="Activities\CustomerFormActivity.cs" />
     <Compile Include="Activities\CustomersActivity.cs" />
     <Compile Include="Activities\CustomersAdapter.cs" />
+    <Compile Include="Activities\DemoActivity.cs" />
     <Compile Include="Activities\MainActivity.cs" />
     <Compile Include="Activities\PrefsActivity.cs" />
     <Compile Include="Model\ClientData.cs" />
@@ -162,6 +163,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\dimens.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_demo.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
