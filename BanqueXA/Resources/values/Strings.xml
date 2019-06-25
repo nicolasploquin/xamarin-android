@@ -1,10 +1,11 @@
 <resources>
-  <string name="app_name">XABanque</string>
+  <string name="app_name">Xam Android</string>
+  <string name="app_short_name">XamAnd</string>
   <string name="prefs_label">Paramètres</string>
   <string name="action_customers">Clients</string>
   <string name="action_customerform">Créer</string>
   <string name="action_prefs">Paramètres</string>
-  <string name="main_label">Banque...</string>
+  <string name="main_label">XA Banque</string>
   <string name="main_description">Bienvenue dans l\'application Banque!</string>
   <string name="main_customers_link">Clients</string>
   <string name="main_customerform_link">Créer</string>

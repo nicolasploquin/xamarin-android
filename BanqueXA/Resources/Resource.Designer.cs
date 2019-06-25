@@ -227,40 +227,16 @@ namespace Eni.Banque.Android
 			public const int baseline_add_24 = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int baseline_add_white_18 = 2130837505;
+			public const int baseline_view_list_24 = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int baseline_add_white_24 = 2130837506;
+			public const int ic_launcher = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int baseline_add_white_36 = 2130837507;
+			public const int ic_launcher_foreground = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int baseline_add_white_48 = 2130837508;
-			
-			// aapt resource value: 0x7f020005
-			public const int baseline_view_list_24 = 2130837509;
-			
-			// aapt resource value: 0x7f020006
-			public const int baseline_view_list_white_18 = 2130837510;
-			
-			// aapt resource value: 0x7f020007
-			public const int baseline_view_list_white_24 = 2130837511;
-			
-			// aapt resource value: 0x7f020008
-			public const int baseline_view_list_white_36 = 2130837512;
-			
-			// aapt resource value: 0x7f020009
-			public const int baseline_view_list_white_48 = 2130837513;
-			
-			// aapt resource value: 0x7f02000a
-			public const int ic_launcher = 2130837514;
-			
-			// aapt resource value: 0x7f02000b
-			public const int ic_launcher_foreground = 2130837515;
-			
-			// aapt resource value: 0x7f02000c
-			public const int ic_launcher_round = 2130837516;
+			public const int ic_launcher_round = 2130837508;
 			
 			static Mipmap()
 			{
@@ -275,59 +251,62 @@ namespace Eni.Banque.Android
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f070003
-			public const int action_customerform = 2131165187;
-			
-			// aapt resource value: 0x7f070002
-			public const int action_customers = 2131165186;
-			
 			// aapt resource value: 0x7f070004
-			public const int action_prefs = 2131165188;
+			public const int action_customerform = 2131165188;
+			
+			// aapt resource value: 0x7f070003
+			public const int action_customers = 2131165187;
+			
+			// aapt resource value: 0x7f070005
+			public const int action_prefs = 2131165189;
 			
 			// aapt resource value: 0x7f070000
 			public const int app_name = 2131165184;
 			
-			// aapt resource value: 0x7f07000e
-			public const int clientform_nom_label = 2131165198;
+			// aapt resource value: 0x7f070001
+			public const int app_short_name = 2131165185;
 			
 			// aapt resource value: 0x7f07000f
-			public const int clientform_prenom_label = 2131165199;
+			public const int clientform_nom_label = 2131165199;
 			
 			// aapt resource value: 0x7f070010
-			public const int clientform_tel_label = 2131165200;
-			
-			// aapt resource value: 0x7f07000b
-			public const int customerdetail_call_label = 2131165195;
-			
-			// aapt resource value: 0x7f07000c
-			public const int customerdetail_edit_label = 2131165196;
-			
-			// aapt resource value: 0x7f07000a
-			public const int customerdetail_label = 2131165194;
-			
-			// aapt resource value: 0x7f07000d
-			public const int customerform_label = 2131165197;
-			
-			// aapt resource value: 0x7f070009
-			public const int customers_label = 2131165193;
+			public const int clientform_prenom_label = 2131165200;
 			
 			// aapt resource value: 0x7f070011
-			public const int demo_label = 2131165201;
+			public const int clientform_tel_label = 2131165201;
+			
+			// aapt resource value: 0x7f07000c
+			public const int customerdetail_call_label = 2131165196;
+			
+			// aapt resource value: 0x7f07000d
+			public const int customerdetail_edit_label = 2131165197;
+			
+			// aapt resource value: 0x7f07000b
+			public const int customerdetail_label = 2131165195;
+			
+			// aapt resource value: 0x7f07000e
+			public const int customerform_label = 2131165198;
+			
+			// aapt resource value: 0x7f07000a
+			public const int customers_label = 2131165194;
+			
+			// aapt resource value: 0x7f070012
+			public const int demo_label = 2131165202;
+			
+			// aapt resource value: 0x7f070009
+			public const int main_customerform_link = 2131165193;
 			
 			// aapt resource value: 0x7f070008
-			public const int main_customerform_link = 2131165192;
+			public const int main_customers_link = 2131165192;
 			
 			// aapt resource value: 0x7f070007
-			public const int main_customers_link = 2131165191;
+			public const int main_description = 2131165191;
 			
 			// aapt resource value: 0x7f070006
-			public const int main_description = 2131165190;
+			public const int main_label = 2131165190;
 			
-			// aapt resource value: 0x7f070005
-			public const int main_label = 2131165189;
-			
-			// aapt resource value: 0x7f070001
-			public const int prefs_label = 2131165185;
+			// aapt resource value: 0x7f070002
+			public const int prefs_label = 2131165186;
 			
 			static String()
 			{
