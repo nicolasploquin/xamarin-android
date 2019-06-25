@@ -9,9 +9,9 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using BanqueXA.Model;
+using Eni.Banque.Android.Model;
 
-namespace BanqueXA.Services
+namespace Eni.Banque.Android.Services
 {
     public interface IBanqueService
     {

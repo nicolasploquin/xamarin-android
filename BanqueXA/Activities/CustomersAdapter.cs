@@ -1,10 +1,10 @@
 ﻿using Android.Views;
 using Android.Widget;
-using BanqueXA.Model;
+using Eni.Banque.Android.Model;
 using System.Collections.Generic;
 using Android.Content;
 
-namespace BanqueXA.Activities
+namespace Eni.Banque.Android.Activities
 {
     class CustomersAdapter : BaseAdapter<Client>
     {

@@ -5,10 +5,10 @@ using Android.Net;
 using Android.OS;
 //using Android.Support.V7.App;
 using Android.Widget;
-using BanqueXA.Model;
-using BanqueXA.Services;
+using Eni.Banque.Android.Model;
+using Eni.Banque.Android.Services;
 
-namespace BanqueXA.Activities
+namespace Eni.Banque.Android.Activities
 {
     [Activity(
         Label = "@string/customerdetail_label",
@@ -37,7 +37,7 @@ namespace BanqueXA.Activities
                 StartActivity(intent);
             };
             FindViewById<Button>(Resource.Id.customerdetail_edit).Click += (sender, e) => {
-                var intent = new Android.Content.Intent(this, typeof(CustomerFormActivity));
+                var intent = new Intent(this, typeof(CustomerFormActivity));
                 intent.PutExtra("id", client.Id);
                 StartActivity(intent);
             };

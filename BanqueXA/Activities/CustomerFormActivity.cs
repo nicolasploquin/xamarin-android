@@ -11,10 +11,10 @@ using Android.Runtime;
 //using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
-using BanqueXA.Model;
-using BanqueXA.Services;
+using Eni.Banque.Android.Model;
+using Eni.Banque.Android.Services;
 
-namespace BanqueXA.Activities
+namespace Eni.Banque.Android.Activities
 {
     [Activity(
         Label = "@string/customerform_label",

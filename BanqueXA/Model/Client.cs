@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-namespace BanqueXA.Model
+namespace Eni.Banque.Android.Model
 {
     public class Client
     {

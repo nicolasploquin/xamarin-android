@@ -10,7 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-namespace BanqueXA.Activities
+namespace Eni.Banque.Android.Activities
 {
     [Activity(Label = "DemoActivity")]
     public class DemoActivity : Activity

@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using BanqueXA.Model;
+using Eni.Banque.Android.Model;
 
-namespace BanqueXA.Services
+namespace Eni.Banque.Android.Services
 {
     public class BanqueInMemService : IBanqueService, IBanqueAsyncService
     {

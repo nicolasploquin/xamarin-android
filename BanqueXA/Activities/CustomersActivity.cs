@@ -1,10 +1,11 @@
 ﻿using Android.App;
 using Android.OS;
+using Android.Content;
 //using Android.Support.V7.App;
 using Android.Widget;
-using BanqueXA.Services;
+using Eni.Banque.Android.Services;
 
-namespace BanqueXA.Activities
+namespace Eni.Banque.Android.Activities
 {
     [Activity(
         Label = "@string/customers_label", 
@@ -27,14 +28,14 @@ namespace BanqueXA.Activities
 
             listView.ItemClick += (sender, e) =>
             {
-                var intent = new Android.Content.Intent(this, typeof(CustomerDetailActivity));
+                var intent = new Intent(this, typeof(CustomerDetailActivity));
                 long id = ((CustomersAdapter)listView.Adapter)[e.Position].Id;
                 intent.PutExtra("id", id);
                 StartActivity(intent);
             };
             listView.ItemLongClick += (sender, e) =>
             {
-                var intent = new Android.Content.Intent(this, typeof(CustomerFormActivity));
+                var intent = new Intent(this, typeof(CustomerFormActivity));
                 long id = ((CustomersAdapter)listView.Adapter)[e.Position].Id;
                 intent.PutExtra("id", id);
                 StartActivity(intent);

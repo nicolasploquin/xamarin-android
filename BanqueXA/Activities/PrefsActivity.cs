@@ -11,7 +11,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-namespace BanqueXA.Activities
+namespace Eni.Banque.Android.Activities
 {
     [Activity(
         Label = "@string/prefs_label",
@@ -23,11 +23,11 @@ namespace BanqueXA.Activities
         {
             base.OnCreate(savedInstanceState);
 
-            FragmentManager
+/*            FragmentManager
                 .BeginTransaction()
                 .Replace(Android.Resource.Id.Content, new PrefsFragment())
                 .Commit()
-                ;
+                ;*/
 
         }
 

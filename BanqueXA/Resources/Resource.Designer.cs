@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("BanqueXA.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("Eni.Banque.Android.Resource", IsApplication=true)]
 
-namespace BanqueXA
+namespace Eni.Banque.Android
 {
 	
 	

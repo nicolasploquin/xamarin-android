@@ -4,10 +4,10 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using BanqueXA.Model;
+using Eni.Banque.Android.Model;
 using Newtonsoft.Json;
 
-namespace BanqueXA.Services
+namespace Eni.Banque.Android.Services
 {
     public class BanqueRestService : IBanqueAsyncService
     {

@@ -5,7 +5,7 @@ using Android.Views;
 //using Android.Support.V7.App;
 //using Android.Support.Design.Widget;
 
-namespace BanqueXA.Activities
+namespace Eni.Banque.Android.Activities
 {
     [Activity(
         Label = "@string/main_label",

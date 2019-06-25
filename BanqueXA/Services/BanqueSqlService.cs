@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using BanqueXA.Model;
+using Eni.Banque.Android.Model;
 using SQLite;
 
 
-namespace BanqueXA.Services
+namespace Eni.Banque.Android.Services
 {
     public class BanqueSqlService : IBanqueAsyncService
     {

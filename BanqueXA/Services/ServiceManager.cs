@@ -1,5 +1,5 @@
 ﻿
-namespace BanqueXA.Services
+namespace Eni.Banque.Android.Services
 {
     public class ServiceManager
     {
