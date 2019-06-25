@@ -3,4 +3,7 @@
     <color name="colorPrimary">#000099</color>
     <color name="colorPrimaryDark">#000066</color>
     <color name="colorAccent">#3498db</color>
+
+    <!-- Material Icons (tint) -->
+    <attr name="colorControlNormal">#ffffff</attr>
 </resources>
