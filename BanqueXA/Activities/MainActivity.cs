@@ -2,6 +2,7 @@
 using Android.Widget;
 using Android.OS;
 using Android.Views;
+using Android.Content.PM;
 //using Android.Support.V7.App;
 //using Android.Support.Design.Widget;
 
@@ -9,7 +10,8 @@ namespace Eni.Banque.Android.Activities
 {
     [Activity(
         Label = "@string/main_label",
-        MainLauncher = true
+        MainLauncher = true,
+        ScreenOrientation = ScreenOrientation.FullSensor
     )]
     public class MainActivity : Activity
     {
@@ -18,7 +20,7 @@ namespace Eni.Banque.Android.Activities
             base.OnCreate(savedInstanceState);
 
             // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.activity_main);
+            SetContentView(Resource.Layout.activity_main_relative);
 
             FindViewById<Button>(Resource.Id.main_nav_customers).Click += (sender, e) => {
                 StartActivity(typeof(CustomersActivity));

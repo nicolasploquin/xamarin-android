@@ -5,5 +5,5 @@
     <color name="colorAccent">#3498db</color>
 
     <!-- Material Icons (tint) -->
-    <attr name="colorControlNormal">#ffffff</attr>
+    <attr name="colorControlNormal">@color/colorAccent</attr>
 </resources>

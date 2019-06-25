@@ -3,7 +3,9 @@ using Android.OS;
 using Android.Content;
 //using Android.Support.V7.App;
 using Android.Widget;
+
 using Eni.Banque.Android.Services;
+using Eni.Banque.Android.Model;
 
 namespace Eni.Banque.Android.Activities
 {
@@ -24,19 +26,33 @@ namespace Eni.Banque.Android.Activities
             //ActionBar.SetDisplayHomeAsUpEnabled(true);
 
             ListView listView = FindViewById<ListView>(Resource.Id.customers_list);
-            listView.Adapter = new CustomersAdapter(await ds.readAllAsync());
+
+
+            // Array adapter
+            //listView.Adapter = new ArrayAdapter<Client>(
+            //    this, 
+            //    Resource.Id.customer_fullname_adapter,
+            //    Resource.Id.customers_adapter_fullname,
+            //    (await ds.readAllAsync()).ToArray()
+            //    );
+            
+            // Custom adapter
+            //listView.Adapter = new CustomersAdapter(await ds.readAllAsync());
+            
+            // Custom adapter with recycler view pattern
+            listView.Adapter = new CustomersRecyclerAdapter(await ds.readAllAsync());
 
             listView.ItemClick += (sender, e) =>
             {
                 var intent = new Intent(this, typeof(CustomerDetailActivity));
-                long id = ((CustomersAdapter)listView.Adapter)[e.Position].Id;
+                long id = listView.Adapter.GetItemId(e.Position);
                 intent.PutExtra("id", id);
                 StartActivity(intent);
             };
             listView.ItemLongClick += (sender, e) =>
             {
                 var intent = new Intent(this, typeof(CustomerFormActivity));
-                long id = ((CustomersAdapter)listView.Adapter)[e.Position].Id;
+                long id = listView.Adapter.GetItemId(e.Position);
                 intent.PutExtra("id", id);
                 StartActivity(intent);
             };

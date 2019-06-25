@@ -3,15 +3,10 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/customers_adapter">
+    android:id="@+id/customer_fullname_adapter">
     <TextView
-        android:id="@+id/customers_adapter_fullname"
+        android:id="@+id/adapter_customer_fullname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="16sp" />
-    <TextView
-        android:id="@+id/customers_adapter_phone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="12sp" />
 </LinearLayout>

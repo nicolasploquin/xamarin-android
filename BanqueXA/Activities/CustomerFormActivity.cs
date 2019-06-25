@@ -11,6 +11,7 @@ using Android.Runtime;
 //using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using Android.Content.PM;
 using Eni.Banque.Android.Model;
 using Eni.Banque.Android.Services;
 
@@ -18,7 +19,8 @@ namespace Eni.Banque.Android.Activities
 {
     [Activity(
         Label = "@string/customerform_label",
-        ParentActivity = typeof(CustomersActivity)
+        ParentActivity = typeof(CustomersActivity),
+        ScreenOrientation = ScreenOrientation.FullSensor
     )]
     public class CustomerFormActivity : Activity
     {

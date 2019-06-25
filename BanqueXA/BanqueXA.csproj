@@ -73,6 +73,7 @@
     <Compile Include="Activities\CustomerDetailActivity.cs" />
     <Compile Include="Activities\CustomerFormActivity.cs" />
     <Compile Include="Activities\CustomersActivity.cs" />
+    <Compile Include="Activities\CustomersRecyclerAdapter.cs" />
     <Compile Include="Activities\CustomersAdapter.cs" />
     <Compile Include="Activities\DemoActivity.cs" />
     <Compile Include="Activities\MainActivity.cs" />
@@ -94,7 +95,7 @@
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\activity_main.axml">
+    <AndroidResource Include="Resources\layout\activity_main_relative.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\values\colors.xml" />
@@ -202,6 +203,16 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\mipmap-anydpi-v26\baseline_view_list_24.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\layout\activity_main_linear.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <AndroidResource Include="Resources\layout\customer_fullname_adapter.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

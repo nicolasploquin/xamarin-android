@@ -88,14 +88,17 @@ namespace Eni.Banque.Android
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f0a0015
+			public const int action_create = 2131361813;
+			
+			// aapt resource value: 0x7f0a0016
+			public const int action_customers = 2131361814;
+			
+			// aapt resource value: 0x7f0a0017
+			public const int action_prefs = 2131361815;
+			
 			// aapt resource value: 0x7f0a0011
-			public const int action_create = 2131361809;
-			
-			// aapt resource value: 0x7f0a0012
-			public const int action_customers = 2131361810;
-			
-			// aapt resource value: 0x7f0a0013
-			public const int action_prefs = 2131361811;
+			public const int adapter_customer_fullname = 2131361809;
 			
 			// aapt resource value: 0x7f0a0005
 			public const int clientform_nom = 2131361797;
@@ -105,6 +108,9 @@ namespace Eni.Banque.Android
 			
 			// aapt resource value: 0x7f0a0007
 			public const int clientform_tel = 2131361799;
+			
+			// aapt resource value: 0x7f0a0010
+			public const int customer_fullname_adapter = 2131361808;
 			
 			// aapt resource value: 0x7f0a0003
 			public const int customerdetail_call = 2131361795;
@@ -124,11 +130,14 @@ namespace Eni.Banque.Android
 			// aapt resource value: 0x7f0a0008
 			public const int customerform_ok = 2131361800;
 			
-			// aapt resource value: 0x7f0a000f
-			public const int customers_adapter_fullname = 2131361807;
+			// aapt resource value: 0x7f0a0012
+			public const int customers_adapter = 2131361810;
 			
-			// aapt resource value: 0x7f0a0010
-			public const int customers_adapter_phone = 2131361808;
+			// aapt resource value: 0x7f0a0013
+			public const int customers_adapter_fullname = 2131361811;
+			
+			// aapt resource value: 0x7f0a0014
+			public const int customers_adapter_phone = 2131361812;
 			
 			// aapt resource value: 0x7f0a0009
 			public const int customers_list = 2131361801;
@@ -136,17 +145,20 @@ namespace Eni.Banque.Android
 			// aapt resource value: 0x7f0a000a
 			public const int demo_activity_lifecycle = 2131361802;
 			
-			// aapt resource value: 0x7f0a000b
-			public const int main_layout = 2131361803;
-			
-			// aapt resource value: 0x7f0a000d
-			public const int main_nav_customerform = 2131361805;
-			
 			// aapt resource value: 0x7f0a000c
-			public const int main_nav_customers = 2131361804;
+			public const int main_description = 2131361804;
+			
+			// aapt resource value: 0x7f0a000b
+			public const int main_layout_relative = 2131361803;
 			
 			// aapt resource value: 0x7f0a000e
-			public const int main_nav_demo = 2131361806;
+			public const int main_nav_customerform = 2131361806;
+			
+			// aapt resource value: 0x7f0a000d
+			public const int main_nav_customers = 2131361805;
+			
+			// aapt resource value: 0x7f0a000f
+			public const int main_nav_demo = 2131361807;
 			
 			static Id()
 			{
@@ -174,10 +186,13 @@ namespace Eni.Banque.Android
 			public const int activity_demo = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int activity_main = 2130903044;
+			public const int activity_main_relative = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int customers_adapter = 2130903045;
+			public const int customer_fullname_adapter = 2130903045;
+			
+			// aapt resource value: 0x7f030006
+			public const int customers_adapter = 2130903046;
 			
 			static Layout()
 			{
