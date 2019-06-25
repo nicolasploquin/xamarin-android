@@ -44,9 +44,11 @@ namespace Eni.Banque.Android.Activities
 
             listView.ItemClick += (sender, e) =>
             {
-                var intent = new Intent(this, typeof(CustomerDetailActivity));
                 long id = listView.Adapter.GetItemId(e.Position);
+
+                var intent = new Intent(this, typeof(CustomerDetailActivity));
                 intent.PutExtra("id", id);
+
                 StartActivity(intent);
             };
             listView.ItemLongClick += (sender, e) =>
