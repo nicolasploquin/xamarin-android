@@ -29,5 +29,19 @@ namespace Eni.Banque.Android.Model
         }
         public string Tel { get; set; }
 
+       
+    }
+
+    public class InitialEqualityComparer: IEqualityComparer<Client>
+    {
+        public bool Equals(Client cli1, Client cli2)
+        {
+            return cli1.Nom.ToCharArray()[0] == cli2.Nom.ToCharArray()[0];
+        }
+
+        public int GetHashCode(Client cli)
+        {
+            return cli == null ? 0 : (int)cli.Nom.ToCharArray()[0];
+        }
     }
 }

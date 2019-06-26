@@ -23,10 +23,11 @@ namespace Eni.Banque.Android.Activities
 
             SetContentView(Resource.Layout.activity_customers);
 
-            //ActionBar.SetDisplayHomeAsUpEnabled(true);
+            // ActionBar.SetDisplayHomeAsUpEnabled(true);
 
             ListView listView = FindViewById<ListView>(Resource.Id.customers_list);
-
+            listView.FastScrollEnabled = true;
+            //listView.FastScrollAlwaysVisible = true;
 
             // Array adapter
             //listView.Adapter = new ArrayAdapter<Client>(

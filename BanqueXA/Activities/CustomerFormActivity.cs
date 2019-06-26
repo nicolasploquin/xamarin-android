@@ -31,6 +31,7 @@ namespace Eni.Banque.Android.Activities
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.activity_customer_form);
+            
 
             //ActionBar.SetDisplayHomeAsUpEnabled(true);
 

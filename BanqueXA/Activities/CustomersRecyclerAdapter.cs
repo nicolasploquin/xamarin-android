@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Linq;
 using Android.Content;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
 using Eni.Banque.Android.Model;
+using Java.Lang;
 
 namespace Eni.Banque.Android.Activities
 {
-    class CustomersRecyclerAdapter : BaseAdapter<Client>
+    class CustomersRecyclerAdapter : BaseAdapter<Client>, ISectionIndexer
     {
         protected List<Client> customers;
 
@@ -18,7 +19,8 @@ namespace Eni.Banque.Android.Activities
 
         public CustomersRecyclerAdapter(List<Client> customers)
         {
-            this.customers = customers;
+            this.customers = customers.OrderBy<Client,string>(c => c.Nom).ToList<Client>();
+            UpdateSections();
         }
 
         public override Client this[int position] => customers[position];
@@ -28,7 +30,40 @@ namespace Eni.Banque.Android.Activities
         public override long GetItemId(int position)
         {
             return customers[position].Id;
+            //return position;
         }
+
+        private string[] sections;
+
+        private void UpdateSections()
+        {
+            sections = customers
+                .Distinct<Client>(new InitialEqualityComparer())
+                .Select(c => c.Nom.Substring(0, 1))
+                .ToArray()
+                ;
+
+            Console.WriteLine(sections.Length + " sections");
+        }
+
+        public Java.Lang.Object[] GetSections()
+        { 
+            return sections.Select(s => new Java.Lang.String(s)).ToArray();
+        }
+
+        public int GetPositionForSection(int sectionIndex)
+        {
+            return Array.FindIndex<Client>(
+                customers.ToArray(),
+                c => c.Nom.Substring(0, 1) == sections[sectionIndex]
+            );
+        }
+
+        public int GetSectionForPosition(int position)
+        {
+            return Array.IndexOf(sections, customers[position].Nom.Substring(0, 1));
+        }
+
 
         public override View GetView(int position, View convertView, ViewGroup parent)
         {

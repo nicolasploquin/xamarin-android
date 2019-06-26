@@ -4,9 +4,6 @@ using Android.OS;
 using Android.Views;
 using Android.Widget;
 
-// using Android.Support.V7.App;
-// using Android.Support.Design.Widget;
-
 namespace Eni.Banque.Android.Activities
 {
     [Activity(
@@ -19,6 +16,8 @@ namespace Eni.Banque.Android.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+
+            ActionBar.Subtitle = "Formation Xamarin Android";
 
             SetContentView(Resource.Layout.activity_main_relative);
             //SetContentView(Resource.Layout.activity_main_linear);
