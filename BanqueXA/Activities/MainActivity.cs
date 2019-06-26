@@ -1,10 +1,11 @@
 ﻿using Android.App;
-using Android.Widget;
+using Android.Content.PM;
 using Android.OS;
 using Android.Views;
-using Android.Content.PM;
-//using Android.Support.V7.App;
-//using Android.Support.Design.Widget;
+using Android.Widget;
+
+// using Android.Support.V7.App;
+// using Android.Support.Design.Widget;
 
 namespace Eni.Banque.Android.Activities
 {
@@ -19,8 +20,8 @@ namespace Eni.Banque.Android.Activities
         {
             base.OnCreate(savedInstanceState);
 
-            // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main_relative);
+            //SetContentView(Resource.Layout.activity_main_linear);
 
             FindViewById<Button>(Resource.Id.main_nav_customers).Click += (sender, e) => {
                 StartActivity(typeof(CustomersActivity));
@@ -43,9 +44,11 @@ namespace Eni.Banque.Android.Activities
 
             //var sharedPreferencesEditor = sharedPreferences.Edit();
             //sharedPreferencesEditor.PutString("nom", "Leblanc");
+
             ////sharedPreferencesEditor.PutBoolean("EstActif", true);
             ////sharedPreferencesEditor.PutFloat("MeilleurScore",23441.80f);
             ////sharedPreferencesEditor.PutString("NomDeLApplication","Ma super appli !");
+            
             //sharedPreferencesEditor.Commit();
         }
 

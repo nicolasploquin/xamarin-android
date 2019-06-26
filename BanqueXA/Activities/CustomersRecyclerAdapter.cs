@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using Android.Content;
 using Android.Runtime;
@@ -12,6 +13,8 @@ namespace Eni.Banque.Android.Activities
     class CustomersRecyclerAdapter : BaseAdapter<Client>
     {
         protected List<Client> customers;
+
+        private int inflateCount = 0;
 
         public CustomersRecyclerAdapter(List<Client> customers)
         {
@@ -37,6 +40,7 @@ namespace Eni.Banque.Android.Activities
 
             if (holder == null)
             {
+                Console.WriteLine(@"{0} inflates.\n", ++inflateCount);
 
                 var inflater = parent.Context.GetSystemService(Context.LayoutInflaterService).JavaCast<LayoutInflater>();
                 //var inflater = LayoutInflater.From(parent.Context);
