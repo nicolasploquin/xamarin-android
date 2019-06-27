@@ -31,6 +31,10 @@ namespace Eni.Banque.Android.Activities
             {
                 StartActivity(typeof(CustomerFormActivity));
             };
+            FindViewById<Button>(Resource.Id.main_nav_scan).Click += (sender, e) =>
+            {
+                StartActivity(typeof(ScanVisionActivity));
+            };
             FindViewById<Button>(Resource.Id.main_nav_demo).Click += (sender, e) =>
             {
                 StartActivity(typeof(DemoActivity));

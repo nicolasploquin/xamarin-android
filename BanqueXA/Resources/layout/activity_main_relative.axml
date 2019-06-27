@@ -35,6 +35,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         />
+	<Button
+        android:id="@+id/main_nav_scan"
+        android:text="@string/scan_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/main_nav_demo"
+        />
 </RelativeLayout>
 
 <!--

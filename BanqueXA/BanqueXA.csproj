@@ -78,7 +78,7 @@
     <Compile Include="Activities\DemoActivity.cs" />
     <Compile Include="Activities\MainActivity.cs" />
     <Compile Include="Activities\PrefsActivity.cs" />
-    <Compile Include="Activities\ScanActivity.cs" />
+    <Compile Include="Activities\ScanVisionActivity.cs" />
     <Compile Include="Activities\SettingsActivity.cs" />
     <Compile Include="Model\ClientData.cs" />
     <Compile Include="Model\Client.cs" />
@@ -132,6 +132,18 @@
     <PackageReference Include="System.Net.Http">
       <Version>4.3.4</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v4">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.GooglePlayServices.Vision">
+      <Version>60.1142.1</Version>
+    </PackageReference>
+    <PackageReference Include="ZXing.Net.Mobile">
+      <Version>2.4.1</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\activity_customer_form.axml">
@@ -180,15 +192,15 @@
     <AndroidResource Include="Resources\mipmap-anydpi-v26\baseline_view_list_24.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\activity_scan.axml">
-      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
-      <SubType>Designer</SubType>
-    </AndroidResource>
     <Content Include="Resources\layout\activity_main_linear.axml">
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
       <SubType>Designer</SubType>
     </Content>
     <AndroidResource Include="Resources\layout\activity_settings.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\activity_scan_vision.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

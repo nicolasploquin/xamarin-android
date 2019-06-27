@@ -19,4 +19,5 @@
   <string name="clientform_prenom_label">Prénom</string>
   <string name="clientform_tel_label">Téléphone</string>
   <string name="demo_label">Démo</string>
+  <string name="scan_label">Scanner</string>
 </resources>
