@@ -59,13 +59,22 @@ namespace Eni.Banque.Android.Services
 
         public async Task<Client> readAsync(long id)
         {
+            //Task<Client> attente = new Task<Client>( () => {
+            //});
+            ////cnx.GetAsync<ClientData>(id).
+            //return attente;
+
             return ClientData.To(await cnx.GetAsync<ClientData>(id));
         }
 
         public async Task<List<Client>> readAllAsync()
         {
-             return (await cnx.Table<ClientData>().OrderBy(cli => cli.Nom).ToListAsync())
-                    .Select(cli => ClientData.To(cli)).ToList<Client>();
+             return 
+                ( await cnx.Table<ClientData>()
+                    .OrderBy(cli => cli.Nom)
+                    .ToListAsync() )
+                    .Select(cli => ClientData.To(cli))
+                    .ToList<Client>();
         }
 
     }

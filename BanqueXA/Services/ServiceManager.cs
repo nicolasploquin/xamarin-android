@@ -5,7 +5,8 @@ namespace Eni.Banque.Android.Services
     {
 
 #if DEBUG
-        public static IBanqueAsyncService DataStore = BanqueInMemService.Instance;
+        // public static IBanqueAsyncService DataStore = BanqueInMemService.Instance;
+        public static IBanqueAsyncService DataStore = BanqueSqlService.Instance;
 #else
         public static IBanqueAsyncService DataStore = BanqueRestService.Instance;
 #endif

@@ -65,7 +65,7 @@ namespace Eni.Banque.Android.Services
         }
         public Task<List<Client>> readAllAsync()
         {
-            return Task.FromResult(clients);
+            return Task.FromResult(readAll());
         }
 
         public Task<Client> readAsync(long id)

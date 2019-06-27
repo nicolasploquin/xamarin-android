@@ -7,9 +7,9 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Preferences;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using static Android.Resource;
 
 namespace Eni.Banque.Android.Activities
 {
@@ -21,6 +21,8 @@ namespace Eni.Banque.Android.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
 
             ISharedPreferences settings = PreferenceManager.GetDefaultSharedPreferences(this);
             ISharedPreferencesEditor settingsEditor = settings.Edit();
@@ -34,6 +36,19 @@ namespace Eni.Banque.Android.Activities
                 settingsEditor.Commit();
             };
         }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Id.Home :
+                    Finish();
+                    return true;
+            }
+
+            return base.OnOptionsItemSelected(item);
+        }
+
 
     }
 }

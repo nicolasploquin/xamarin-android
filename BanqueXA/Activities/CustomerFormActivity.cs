@@ -7,13 +7,11 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Preferences;
-using Android.Runtime;
-//using Android.Support.V7.App;
-using Android.Views;
 using Android.Widget;
 using Android.Content.PM;
 using Eni.Banque.Android.Model;
 using Eni.Banque.Android.Services;
+using Android.Views;
 
 namespace Eni.Banque.Android.Activities
 {
@@ -31,7 +29,7 @@ namespace Eni.Banque.Android.Activities
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.activity_customer_form);
-            
+
 
             //ActionBar.SetDisplayHomeAsUpEnabled(true);
 
@@ -42,6 +40,8 @@ namespace Eni.Banque.Android.Activities
             Button btnOk = FindViewById<Button>(Resource.Id.customerform_ok);
 
             Client client;
+
+            
 
             long id = Intent.GetLongExtra("id", -1);
             if (id != -1)
@@ -64,8 +64,12 @@ namespace Eni.Banque.Android.Activities
                 Toast.MakeText(this, "Enregistré", ToastLength.Short).Show();
 
                 client = new Client() {
-                    Nom = editLastName.Text,
-                    Prenom = editFirstName.Text,
+                    Nom = editLastName.Text.ToUpper().Trim(),
+                    Prenom = string.Join("-",
+                            editFirstName.Text.ToLower()
+                            .Split('-')
+                            .Select(p => (p.Length > 0) ? p.Substring(0,1).ToUpper() + p.Substring(1) : "" )
+                        ),
                     Tel = editPhone.Text
                 };
 
@@ -75,6 +79,28 @@ namespace Eni.Banque.Android.Activities
 
             };
 
+        }
+
+
+        // Jamais !!!
+        //public override void OnBackPressed() { }
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            this.MenuInflater.Inflate(Resource.Menu.menu_main, menu);
+            menu.RemoveGroup(Resource.Id.menu_group_main);
+            return true;
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Resource.Id.action_prefs:
+                    StartActivity(typeof(SettingsActivity));
+                    return true;
+            }
+            return base.OnOptionsItemSelected(item);
         }
     }
 }

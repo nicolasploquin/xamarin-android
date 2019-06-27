@@ -7,6 +7,7 @@ using Android.OS;
 using Android.Widget;
 using Eni.Banque.Android.Model;
 using Eni.Banque.Android.Services;
+using System.Threading.Tasks;
 
 namespace Eni.Banque.Android.Activities
 {
@@ -24,10 +25,15 @@ namespace Eni.Banque.Android.Activities
 
             SetContentView(Resource.Layout.activity_customer_detail);
 
-            //ActionBar.SetDisplayHomeAsUpEnabled(true);
+            Client client = await ds.readAsync(Intent.GetLongExtra("id", -1));
 
-            Client client = await ds.readAsync(Intent.GetLongExtra("id",-1));
-            
+            // Traitement asynchrone
+            // Task<Client> attente = ds.readAsync(Intent.GetLongExtra("id", -1));
+            //  attente.ContinueWith(cli =>
+            //{
+            //    Client client = cli.Result;
+            //});
+
             FindViewById<TextView>(Resource.Id.customerdetail_lastname).Text = client.Nom;
             FindViewById<TextView>(Resource.Id.customerdetail_firstname).Text = client.Prenom;
             FindViewById<TextView>(Resource.Id.customerdetail_phone).Text = client.Tel;

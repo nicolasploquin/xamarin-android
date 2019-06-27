@@ -78,6 +78,7 @@
     <Compile Include="Activities\DemoActivity.cs" />
     <Compile Include="Activities\MainActivity.cs" />
     <Compile Include="Activities\PrefsActivity.cs" />
+    <Compile Include="Activities\ScanActivity.cs" />
     <Compile Include="Activities\SettingsActivity.cs" />
     <Compile Include="Model\ClientData.cs" />
     <Compile Include="Model\Client.cs" />
@@ -179,6 +180,10 @@
     <AndroidResource Include="Resources\mipmap-anydpi-v26\baseline_view_list_24.xml" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_scan.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <Content Include="Resources\layout\activity_main_linear.axml">
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
       <SubType>Designer</SubType>

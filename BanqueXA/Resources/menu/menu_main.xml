@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
-
-  <item android:id="@+id/action_create"
-        android:title="@string/action_customerform"
-        android:icon="@mipmap/baseline_add_24"
-        android:showAsAction="always"
-        />
-  <item android:id="@+id/action_customers"
-        android:title="@string/action_customers"
-        android:icon="@mipmap/baseline_view_list_24"
-        android:showAsAction="ifRoom"
-        />
+  <group android:id="@+id/menu_group_main">
+    <item android:id="@+id/action_create"
+          android:title="@string/action_customerform"
+          android:icon="@mipmap/baseline_add_24"
+          android:showAsAction="always"
+          />
+    <item android:id="@+id/action_customers"
+          android:title="@string/action_customers"
+          android:icon="@mipmap/baseline_view_list_24"
+          android:showAsAction="ifRoom"
+          />
+  </group>
   <item android:id="@+id/action_prefs"
         android:title="@string/prefs_label"
         android:showAsAction="never"
         />
-
 </menu>
 

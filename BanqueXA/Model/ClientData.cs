@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 namespace Eni.Banque.Android.Model
 {
-    
+    [Table("client")]
     public class ClientData
     {
         [PrimaryKey, AutoIncrement]
