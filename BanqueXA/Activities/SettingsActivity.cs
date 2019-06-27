@@ -11,16 +11,29 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-namespace BanqueXA.Activities
+namespace Eni.Banque.Android.Activities
 {
-    [Activity(Label = "SettingsActivity")]
-    public class SettingsActivity : PreferenceActivity
+    [Activity(Label = "@string/prefs_label")]
+    public class SettingsActivity : Activity
     {
+        EditText defaultName;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
-            //AddPreferencesFromResource(Resource.Xml.preferences);
+            ISharedPreferences settings = PreferenceManager.GetDefaultSharedPreferences(this);
+            ISharedPreferencesEditor settingsEditor = settings.Edit();
+
+            SetContentView(Resource.Layout.activity_settings);
+
+            defaultName = FindViewById<EditText>(Resource.Id.settings_default_name);
+            defaultName.Text = settings.GetString("defaultName", "");
+            defaultName.TextChanged += (sender, e) => {
+                settingsEditor.PutString("defaultName", defaultName.Text);
+                settingsEditor.Commit();
+            };
         }
+
     }
 }

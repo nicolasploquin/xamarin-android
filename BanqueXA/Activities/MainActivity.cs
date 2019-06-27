@@ -4,6 +4,8 @@ using Android.OS;
 using Android.Views;
 using Android.Widget;
 
+using Android.Content;
+
 namespace Eni.Banque.Android.Activities
 {
     [Activity(
@@ -38,17 +40,17 @@ namespace Eni.Banque.Android.Activities
             //};
 
 
-            //var sharedPreferences = GetSharedPreferences("MesPreferences",
-            //    Android.Content.FileCreationMode.Private);
+            var sharedPreferences = GetSharedPreferences("MesPreferences",
+                FileCreationMode.Private);
 
-            //var sharedPreferencesEditor = sharedPreferences.Edit();
-            //sharedPreferencesEditor.PutString("nom", "Leblanc");
+            var sharedPreferencesEditor = sharedPreferences.Edit();
+            sharedPreferencesEditor.PutString("nom", "Leblanc");
 
-            ////sharedPreferencesEditor.PutBoolean("EstActif", true);
-            ////sharedPreferencesEditor.PutFloat("MeilleurScore",23441.80f);
-            ////sharedPreferencesEditor.PutString("NomDeLApplication","Ma super appli !");
-            
-            //sharedPreferencesEditor.Commit();
+            //sharedPreferencesEditor.PutBoolean("EstActif", true);
+            //sharedPreferencesEditor.PutFloat("MeilleurScore",23441.80f);
+            //sharedPreferencesEditor.PutString("NomDeLApplication","Ma super appli !");
+
+            sharedPreferencesEditor.Commit();
         }
 
 
@@ -69,7 +71,7 @@ namespace Eni.Banque.Android.Activities
                     StartActivity(typeof(CustomersActivity));
                     return true;
                 case Resource.Id.action_prefs:
-                    StartActivity(typeof(PrefsActivity));
+                    StartActivity(typeof(SettingsActivity));
                     return true;
             }
             return base.OnOptionsItemSelected(item);

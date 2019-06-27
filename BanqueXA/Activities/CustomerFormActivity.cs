@@ -54,9 +54,9 @@ namespace Eni.Banque.Android.Activities
             else
             {
                 client = new Client();
-                
-                ISharedPreferences sharedPreferences = PreferenceManager.GetDefaultSharedPreferences(this);
-                editLastName.Text = sharedPreferences.GetString("prefs_nom", string.Empty);
+
+                ISharedPreferences settings = PreferenceManager.GetDefaultSharedPreferences(this);
+                editLastName.Text = settings.GetString("defaultName", string.Empty);
             }
 
 

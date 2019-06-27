@@ -78,6 +78,7 @@
     <Compile Include="Activities\DemoActivity.cs" />
     <Compile Include="Activities\MainActivity.cs" />
     <Compile Include="Activities\PrefsActivity.cs" />
+    <Compile Include="Activities\SettingsActivity.cs" />
     <Compile Include="Model\ClientData.cs" />
     <Compile Include="Model\Client.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -182,8 +183,7 @@
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
       <SubType>Designer</SubType>
     </Content>
-    <AndroidResource Include="Resources\layout\customer_fullname_adapter.axml">
-      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    <AndroidResource Include="Resources\layout\activity_settings.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

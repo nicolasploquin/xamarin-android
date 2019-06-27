@@ -2,6 +2,7 @@
   <string name="app_name">Xam Android</string>
   <string name="app_short_name">XamAnd</string>
   <string name="prefs_label">Paramètres</string>
+  <string name="settings_default_name_label">Nom par défaut</string>
   <string name="action_customers">Clients</string>
   <string name="action_customerform">Créer</string>
   <string name="action_prefs">Paramètres</string>

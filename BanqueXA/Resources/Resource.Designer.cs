@@ -97,9 +97,6 @@ namespace Eni.Banque.Android
 			// aapt resource value: 0x7f0a0017
 			public const int action_prefs = 2131361815;
 			
-			// aapt resource value: 0x7f0a0011
-			public const int adapter_customer_fullname = 2131361809;
-			
 			// aapt resource value: 0x7f0a0005
 			public const int clientform_nom = 2131361797;
 			
@@ -108,9 +105,6 @@ namespace Eni.Banque.Android
 			
 			// aapt resource value: 0x7f0a0007
 			public const int clientform_tel = 2131361799;
-			
-			// aapt resource value: 0x7f0a0010
-			public const int customer_fullname_adapter = 2131361808;
 			
 			// aapt resource value: 0x7f0a0003
 			public const int customerdetail_call = 2131361795;
@@ -160,6 +154,12 @@ namespace Eni.Banque.Android
 			// aapt resource value: 0x7f0a000f
 			public const int main_nav_demo = 2131361807;
 			
+			// aapt resource value: 0x7f0a0011
+			public const int settings_default_name = 2131361809;
+			
+			// aapt resource value: 0x7f0a0010
+			public const int settings_layout = 2131361808;
+			
 			static Id()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -189,7 +189,7 @@ namespace Eni.Banque.Android
 			public const int activity_main_relative = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int customer_fullname_adapter = 2130903045;
+			public const int activity_settings = 2130903045;
 			
 			// aapt resource value: 0x7f030006
 			public const int customers_adapter = 2130903046;
@@ -251,14 +251,14 @@ namespace Eni.Banque.Android
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f070004
-			public const int action_customerform = 2131165188;
-			
-			// aapt resource value: 0x7f070003
-			public const int action_customers = 2131165187;
-			
 			// aapt resource value: 0x7f070005
-			public const int action_prefs = 2131165189;
+			public const int action_customerform = 2131165189;
+			
+			// aapt resource value: 0x7f070004
+			public const int action_customers = 2131165188;
+			
+			// aapt resource value: 0x7f070006
+			public const int action_prefs = 2131165190;
 			
 			// aapt resource value: 0x7f070000
 			public const int app_name = 2131165184;
@@ -266,47 +266,50 @@ namespace Eni.Banque.Android
 			// aapt resource value: 0x7f070001
 			public const int app_short_name = 2131165185;
 			
-			// aapt resource value: 0x7f07000f
-			public const int clientform_nom_label = 2131165199;
-			
 			// aapt resource value: 0x7f070010
-			public const int clientform_prenom_label = 2131165200;
+			public const int clientform_nom_label = 2131165200;
 			
 			// aapt resource value: 0x7f070011
-			public const int clientform_tel_label = 2131165201;
-			
-			// aapt resource value: 0x7f07000c
-			public const int customerdetail_call_label = 2131165196;
-			
-			// aapt resource value: 0x7f07000d
-			public const int customerdetail_edit_label = 2131165197;
-			
-			// aapt resource value: 0x7f07000b
-			public const int customerdetail_label = 2131165195;
-			
-			// aapt resource value: 0x7f07000e
-			public const int customerform_label = 2131165198;
-			
-			// aapt resource value: 0x7f07000a
-			public const int customers_label = 2131165194;
+			public const int clientform_prenom_label = 2131165201;
 			
 			// aapt resource value: 0x7f070012
-			public const int demo_label = 2131165202;
+			public const int clientform_tel_label = 2131165202;
+			
+			// aapt resource value: 0x7f07000d
+			public const int customerdetail_call_label = 2131165197;
+			
+			// aapt resource value: 0x7f07000e
+			public const int customerdetail_edit_label = 2131165198;
+			
+			// aapt resource value: 0x7f07000c
+			public const int customerdetail_label = 2131165196;
+			
+			// aapt resource value: 0x7f07000f
+			public const int customerform_label = 2131165199;
+			
+			// aapt resource value: 0x7f07000b
+			public const int customers_label = 2131165195;
+			
+			// aapt resource value: 0x7f070013
+			public const int demo_label = 2131165203;
+			
+			// aapt resource value: 0x7f07000a
+			public const int main_customerform_link = 2131165194;
 			
 			// aapt resource value: 0x7f070009
-			public const int main_customerform_link = 2131165193;
+			public const int main_customers_link = 2131165193;
 			
 			// aapt resource value: 0x7f070008
-			public const int main_customers_link = 2131165192;
+			public const int main_description = 2131165192;
 			
 			// aapt resource value: 0x7f070007
-			public const int main_description = 2131165191;
-			
-			// aapt resource value: 0x7f070006
-			public const int main_label = 2131165190;
+			public const int main_label = 2131165191;
 			
 			// aapt resource value: 0x7f070002
 			public const int prefs_label = 2131165186;
+			
+			// aapt resource value: 0x7f070003
+			public const int settings_default_name_label = 2131165187;
 			
 			static String()
 			{

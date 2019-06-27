@@ -23,11 +23,11 @@ namespace Eni.Banque.Android.Activities
         {
             base.OnCreate(savedInstanceState);
 
-/*            FragmentManager
-                .BeginTransaction()
-                .Replace(Android.Resource.Id.Content, new PrefsFragment())
-                .Commit()
-                ;*/
+            //FragmentManager
+            //    .BeginTransaction()
+            //    .Replace(Android.Resource.Id.Content, new PrefsFragment())
+            //    .Commit()
+            //    ;
 
         }
 
