@@ -38,7 +38,7 @@ namespace Eni.Banque.Android.Activities
                                 //Request Permision  
                                 ActivityCompat.RequestPermissions(this, new string[]
                                 {
-                    Manifest.Permission.Camera
+                                    Manifest.Permission.Camera
                                 }, RequestCameraPermisionID);
                                 return;
                             }
@@ -57,7 +57,6 @@ namespace Eni.Banque.Android.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            // Set our view from the "main" layout resource  
             SetContentView(Resource.Layout.activity_scan_vision);
             surfaceView = FindViewById<SurfaceView>(Resource.Id.cameraView);
             txtResult = FindViewById<TextView>(Resource.Id.txtResult);

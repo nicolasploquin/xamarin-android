@@ -24,7 +24,7 @@ namespace Eni.Banque.Android.Services
 
         private HttpClient http;
 
-        private const string API = "https://banque-api.azurewebsites.net/api";
+        private const string API = "https://banque.azurewebsites.net/api";
 
         public BanqueRestService()
         {
@@ -34,7 +34,7 @@ namespace Eni.Banque.Android.Services
         public void createAsync(Client client)
         {
             var content = new StringContent(JsonConvert.SerializeObject(client), Encoding.UTF8, "application/json");
-            string uri = string.Format(@"{0}/clients/post", API);
+            string uri = string.Format(@"{0}/clients", API);
             var response = http.PostAsync(uri, content).Result;
 
         }

@@ -141,9 +141,6 @@
     <PackageReference Include="Xamarin.GooglePlayServices.Vision">
       <Version>60.1142.1</Version>
     </PackageReference>
-    <PackageReference Include="ZXing.Net.Mobile">
-      <Version>2.4.1</Version>
-    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\activity_customer_form.axml">

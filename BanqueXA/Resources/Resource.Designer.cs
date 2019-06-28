@@ -26,9 +26,6 @@ namespace Eni.Banque.Android
 		
 		public static void UpdateIdValues()
 		{
-			global::ZXing.Mobile.Resource.Id.contentFrame = global::Eni.Banque.Android.Resource.Id.contentFrame;
-			global::ZXing.Mobile.Resource.Layout.zxingscanneractivitylayout = global::Eni.Banque.Android.Resource.Layout.zxingscanneractivitylayout;
-			global::ZXing.Mobile.Resource.Layout.zxingscannerfragmentlayout = global::Eni.Banque.Android.Resource.Layout.zxingscannerfragmentlayout;
 		}
 		
 		public partial class Animation
@@ -2053,11 +2050,11 @@ namespace Eni.Banque.Android
 			// aapt resource value: 0x7f0d0070
 			public const int action_context_bar = 2131558512;
 			
-			// aapt resource value: 0x7f0d00ac
-			public const int action_create = 2131558572;
+			// aapt resource value: 0x7f0d00ab
+			public const int action_create = 2131558571;
 			
-			// aapt resource value: 0x7f0d00ad
-			public const int action_customers = 2131558573;
+			// aapt resource value: 0x7f0d00ac
+			public const int action_customers = 2131558572;
 			
 			// aapt resource value: 0x7f0d009e
 			public const int action_divider = 2131558558;
@@ -2080,8 +2077,8 @@ namespace Eni.Banque.Android
 			// aapt resource value: 0x7f0d004d
 			public const int action_mode_close_button = 2131558477;
 			
-			// aapt resource value: 0x7f0d00ae
-			public const int action_prefs = 2131558574;
+			// aapt resource value: 0x7f0d00ad
+			public const int action_prefs = 2131558573;
 			
 			// aapt resource value: 0x7f0d0099
 			public const int action_text = 2131558553;
@@ -2169,9 +2166,6 @@ namespace Eni.Banque.Android
 			
 			// aapt resource value: 0x7f0d0064
 			public const int content = 2131558500;
-			
-			// aapt resource value: 0x7f0d00aa
-			public const int contentFrame = 2131558570;
 			
 			// aapt resource value: 0x7f0d0057
 			public const int contentPanel = 2131558487;
@@ -2323,8 +2317,8 @@ namespace Eni.Banque.Android
 			// aapt resource value: 0x7f0d009d
 			public const int media_actions = 2131558557;
 			
-			// aapt resource value: 0x7f0d00ab
-			public const int menu_group_main = 2131558571;
+			// aapt resource value: 0x7f0d00aa
+			public const int menu_group_main = 2131558570;
 			
 			// aapt resource value: 0x7f0d007e
 			public const int message = 2131558526;
@@ -2738,12 +2732,6 @@ namespace Eni.Banque.Android
 			
 			// aapt resource value: 0x7f040036
 			public const int support_simple_spinner_dropdown_item = 2130968630;
-			
-			// aapt resource value: 0x7f040037
-			public const int zxingscanneractivitylayout = 2130968631;
-			
-			// aapt resource value: 0x7f040038
-			public const int zxingscannerfragmentlayout = 2130968632;
 			
 			static Layout()
 			{
