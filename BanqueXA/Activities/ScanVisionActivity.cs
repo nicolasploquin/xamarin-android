@@ -13,6 +13,7 @@ using Android.Support.V7.App;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
+using Eni.Banque.Android.Services;
 using static Android.Gms.Vision.Detector;
 
 namespace Eni.Banque.Android.Activities
@@ -24,12 +25,12 @@ namespace Eni.Banque.Android.Activities
         TextView txtResult;
         BarcodeDetector barcodeDetector;
         CameraSource cameraSource;
-        const int RequestCameraPermisionID = 1001;
+
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
         {
             switch (requestCode)
             {
-                case RequestCameraPermisionID:
+                case AppPermissions.RequestCameraPermissionID:
                     {
                         if (grantResults[0] == Permission.Granted)
                         {
@@ -39,7 +40,7 @@ namespace Eni.Banque.Android.Activities
                                 ActivityCompat.RequestPermissions(this, new string[]
                                 {
                                     Manifest.Permission.Camera
-                                }, RequestCameraPermisionID);
+                                }, AppPermissions.RequestCameraPermissionID);
                                 return;
                             }
                             try
@@ -81,7 +82,7 @@ namespace Eni.Banque.Android.Activities
                 ActivityCompat.RequestPermissions(this, new string[]
                 {
                     Manifest.Permission.Camera
-                }, RequestCameraPermisionID);
+                }, AppPermissions.RequestCameraPermissionID);
                 return;
             }
             try

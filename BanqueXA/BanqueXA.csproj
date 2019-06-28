@@ -87,6 +87,7 @@
     <Compile Include="Services\BanqueInMemService.cs" />
     <Compile Include="Services\BanqueRestService.cs" />
     <Compile Include="Services\BanqueSqlService.cs" />
+    <Compile Include="Services\AppPermissions.cs" />
     <Compile Include="Services\ServiceManager.cs" />
     <Compile Include="Services\IBanqueAsyncService.cs" />
     <Compile Include="Services\IBanqueService.cs" />
