@@ -38,8 +38,8 @@ namespace Eni.Banque.Android.Activities
         private void UpdateSections()
         {
             sections = customers
-                .Distinct<Client>(new InitialEqualityComparer())
                 .Select(c => c.Nom.Substring(0, 1))
+                .Distinct()
                 .ToArray()
                 ;
 
