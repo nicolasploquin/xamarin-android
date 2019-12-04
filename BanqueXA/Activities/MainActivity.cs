@@ -77,6 +77,9 @@ namespace Eni.Banque.Android.Activities
                 case Resource.Id.action_prefs:
                     StartActivity(typeof(SettingsActivity));
                     return true;
+                case Resource.Id.action_auth:
+                    StartActivity(typeof(AuthActivity));
+                    return true;
             }
             return base.OnOptionsItemSelected(item);
         }

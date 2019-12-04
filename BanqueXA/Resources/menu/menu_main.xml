@@ -16,5 +16,9 @@
         android:title="@string/prefs_label"
         android:showAsAction="never"
         />
+  <item android:id="@+id/action_auth"
+    android:title="@string/auth_label"
+    android:showAsAction="never"
+        />
 </menu>
 
