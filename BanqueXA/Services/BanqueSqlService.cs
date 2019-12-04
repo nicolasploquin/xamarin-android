@@ -42,7 +42,7 @@ namespace Eni.Banque.Android.Services
 //#endif
             //var path = Path.Combine(libraryPath, filename); // Natif
   */
-            var path = Path.Combine(FileSystem.AppDataDirectory, filename); // Essentials
+            var path = Path.Combine(FileSystem.CacheDirectory, filename); // Essentials
 
             cnx = new SQLiteAsyncConnection(path);
 
