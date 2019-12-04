@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using Eni.Banque.Android.Model;
+
+using Xamarin.Essentials;
+
 using SQLite;
 
+using Eni.Banque.Android.Model;
 
 namespace Eni.Banque.Android.Services
 {
@@ -22,14 +25,14 @@ namespace Eni.Banque.Android.Services
             }
         }
 
-        //private Func<SQLiteConnectionWithLock> factory;
         private SQLiteAsyncConnection cnx;
 
         private readonly string filename = "BanqueDB.db3";
 
         public BanqueSqlService()
         {
-//#if ___ANDROID__
+            /* -- remplacé par Xamarin.Essentials --
+//#if __ANDROID__
             // Android
             string libraryPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal); ;
 //#elif __IOS__
@@ -37,14 +40,10 @@ namespace Eni.Banque.Android.Services
             //string documentsPath = Environment.GetFolderPath (Environment.SpecialFolder.Personal); // Documents folder
             //string libraryPath = Path.Combine (documentsPath, "..", "Library"); // Library folder instead
 //#endif
-            var path = Path.Combine(libraryPath, filename);
+            //var path = Path.Combine(libraryPath, filename); // Natif
+  */
+            var path = Path.Combine(FileSystem.AppDataDirectory, filename); // Essentials
 
-            //factory = new Func<SQLiteConnectionWithLock>(
-            //    () => new SQLiteConnectionWithLock(
-            //            new SQLitePlatformAndroid(),
-            //            new SQLiteConnectionString(path, storeDateTimeAsTicks: false)
-            //          )
-            //);
             cnx = new SQLiteAsyncConnection(path);
 
             // Création de la table ClientData si nécessaire 
@@ -59,11 +58,6 @@ namespace Eni.Banque.Android.Services
 
         public async Task<Client> readAsync(long id)
         {
-            //Task<Client> attente = new Task<Client>( () => {
-            //});
-            ////cnx.GetAsync<ClientData>(id).
-            //return attente;
-
             return ClientData.To(await cnx.GetAsync<ClientData>(id));
         }
 
