@@ -17,7 +17,7 @@ namespace Eni.Banque.Android.Activities
 {
     [Activity(
         Label = "@string/customerform_label",
-        ParentActivity = typeof(CustomersActivity),
+        ParentActivity = typeof(MainActivity),
         ScreenOrientation = ScreenOrientation.FullSensor
     )]
     public class CustomerFormActivity : Activity
@@ -31,7 +31,7 @@ namespace Eni.Banque.Android.Activities
             SetContentView(Resource.Layout.activity_customer_form);
 
 
-            //ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
 
             EditText editLastName = FindViewById<EditText>(Resource.Id.clientform_nom);
             EditText editFirstName = FindViewById<EditText>(Resource.Id.clientform_prenom);
@@ -64,13 +64,9 @@ namespace Eni.Banque.Android.Activities
                 Toast.MakeText(this, "Enregistré", ToastLength.Short).Show();
 
                 client = new Client() {
-                    Nom = editLastName.Text.ToUpper().Trim(),
-                    Prenom = string.Join("-",
-                            editFirstName.Text.ToLower()
-                            .Split('-')
-                            .Select(p => (p.Length > 0) ? p.Substring(0,1).ToUpper() + p.Substring(1) : "" )
-                        ),
-                    Tel = editPhone.Text
+                    Nom = editLastName.Text.Trim(),
+                    Prenom = editFirstName.Text.Trim(),
+                    Tel = editPhone.Text.Trim()
                 };
 
                 ds.createAsync(client);

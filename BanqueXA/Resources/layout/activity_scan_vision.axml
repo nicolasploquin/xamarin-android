@@ -17,6 +17,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="Please focus Camera to QR Code"
-        android:textSize="@dimen/abc_text_size_medium_material"  
+        android:textSize="16sp"
     />
 </LinearLayout>

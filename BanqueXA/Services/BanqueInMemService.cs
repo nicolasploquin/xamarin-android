@@ -73,9 +73,10 @@ namespace Eni.Banque.Android.Services
             return Task.FromResult(read(id));
         }
 
-        public void createAsync(Client client)
+        public Task createAsync(Client client)
         {
             create(client);
+            return Task.CompletedTask;
         }
     }
 }

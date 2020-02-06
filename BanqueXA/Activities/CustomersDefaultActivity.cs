@@ -1,7 +1,6 @@
 ﻿using Android.App;
 using Android.OS;
 using Android.Content;
-//using Android.Support.V7.App;
 using Android.Widget;
 
 using Eni.Banque.Android.Services;
@@ -13,7 +12,7 @@ namespace Eni.Banque.Android.Activities
         Label = "@string/customers_label", 
         ParentActivity = typeof(MainActivity)
     )]
-    public class CustomersActivity : Activity
+    public class CustomersDefaultActivity : Activity
     {
         private IBanqueAsyncService ds = ServiceManager.DataStore;
 
@@ -23,17 +22,12 @@ namespace Eni.Banque.Android.Activities
 
             SetContentView(Resource.Layout.activity_customers);
 
-            // ActionBar.SetDisplayHomeAsUpEnabled(true);
-
             ListView listView = FindViewById<ListView>(Resource.Id.customers_list);
-            listView.FastScrollEnabled = true;
-            //listView.FastScrollAlwaysVisible = true;
 
-            // Array adapter
+            // Default Array adapter
             //listView.Adapter = new ArrayAdapter<Client>(
             //    this,
-            //    Resource.Id.customer_fullname_adapter,
-            //    Resource.Id.customers_adapter_fullname,
+            //    Android.Resource.Layout.simple_list_item_1,
             //    (await ds.readAllAsync()).ToArray()
             //    );
 
@@ -61,5 +55,8 @@ namespace Eni.Banque.Android.Activities
             };
 
         }
+
     }
+
+
 }

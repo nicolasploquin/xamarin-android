@@ -1,5 +1,4 @@
-﻿
-using Android;
+﻿using Android;
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
@@ -7,7 +6,7 @@ using Android.Net;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.V4.App;
-//using Android.Support.V7.App;
+using Android.Views;
 using Android.Widget;
 using Eni.Banque.Android.Model;
 using Eni.Banque.Android.Services;
@@ -22,15 +21,13 @@ namespace Eni.Banque.Android.Activities
     {
         private IBanqueAsyncService ds = ServiceManager.DataStore;
 
-        private Client client = null;
-
-        protected async override void OnCreate(Bundle savedInstanceState)
+        protected override async void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.activity_customer_detail);
 
-            client = await ds.readAsync(Intent.GetLongExtra("id", -1));
+            Client client = await ds.readAsync(Intent.GetLongExtra("id", -1));
 
             // Traitement asynchrone
             // Task<Client> attente = ds.readAsync(Intent.GetLongExtra("id", -1));
@@ -39,16 +36,21 @@ namespace Eni.Banque.Android.Activities
             //    Client client = cli.Result;
             //});
 
+            // Check phone call permission
+            ActivityCompat.RequestPermissions(this, new string[] {
+                Manifest.Permission.CallPhone
+            }, AppPermissions.RequestCallPhonePermissionID);
+
             FindViewById<TextView>(Resource.Id.customerdetail_lastname).Text = client.Nom;
             FindViewById<TextView>(Resource.Id.customerdetail_firstname).Text = client.Prenom;
             FindViewById<TextView>(Resource.Id.customerdetail_phone).Text = client.Tel;
 
             FindViewById<Button>(Resource.Id.customerdetail_call).Click += (sender, e) => {
-
-                // Check phone call permission and run OnRequestPermissionsResult()
-                ActivityCompat.RequestPermissions(this, new string[] {
-                    Manifest.Permission.CallPhone
-                }, AppPermissions.RequestCallPhonePermissionID);
+                Intent intent = new Intent(
+                    Intent.ActionCall,
+                    Uri.Parse(string.Format("tel:{0}", client.Tel))
+                );
+                StartActivity(intent);
 
                 //PhoneDialer.Open(client.Tel);
             };
@@ -59,20 +61,16 @@ namespace Eni.Banque.Android.Activities
             };
 
         }
-
-
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
         {
             if ( requestCode == AppPermissions.RequestCallPhonePermissionID
-              && grantResults[0] == Permission.Granted )
+              && grantResults[0] == Permission.Denied )
             {
-                Intent intent = new Intent(
-                    Intent.ActionCall,
-                    Uri.Parse(string.Format("tel:{0}", client.Tel))
-                );
-                StartActivity(intent);
+                FindViewById<Button>(Resource.Id.customerdetail_call).Visibility = ViewStates.Gone;
+                //Button bouton = FindViewById<Button>(Resource.Id.customerdetail_call);
+                //ViewGroup layout = (ViewGroup) bouton.Parent;
+                //layout.RemoveView(bouton);
             }
         }
-
     }
 }

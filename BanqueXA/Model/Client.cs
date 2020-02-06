@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using SQLite;
 namespace Eni.Banque.Android.Model
 {
     public class Client
     {
  
+        [PrimaryKey, AutoIncrement]
         public long Id { get; set; }
 
         private string nom = "";

@@ -7,7 +7,6 @@ using Android.Views;
 using Android.Widget;
 
 using Eni.Banque.Android.Model;
-using Java.Lang;
 
 namespace Eni.Banque.Android.Activities
 {

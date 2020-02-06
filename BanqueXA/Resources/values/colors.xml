@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#000099</color>
-    <color name="colorPrimaryDark">#000066</color>
-    <color name="colorAccent">#3498db</color>
+    <color name="colorPrimary">#3F51B5</color><!-- Indigo 50 500 -->
+    <color name="colorPrimaryDark">#283593</color><!-- Indigo 50 800 -->
+    <color name="colorAccent">#FFC400</color><!-- Amber 50 A400 -->
 
     <!-- Material Icons (tint) -->
     <!--<attr name="colorControlNormal">@color/colorAccent</attr>-->

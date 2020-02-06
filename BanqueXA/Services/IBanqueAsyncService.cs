@@ -15,7 +15,7 @@ namespace Eni.Banque.Android.Services
 {
     public interface IBanqueAsyncService
     {
-        void createAsync(Client client);
+        Task createAsync(Client client);
         Task<List<Client>> readAllAsync();
         Task<Client> readAsync(long id);
 

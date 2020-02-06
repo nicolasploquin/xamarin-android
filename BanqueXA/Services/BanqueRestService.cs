@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using Android.Widget;
@@ -32,21 +33,22 @@ namespace Eni.Banque.Android.Services
         public BanqueRestService()
         {
             http = new HttpClient(new Xamarin.Android.Net.AndroidClientHandler());
-            
+            http.DefaultRequestHeaders.Add("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjIiLCJuYmYiOjE1ODA5MTAzNzgsImV4cCI6MTU4MTUxNTE3OCwiaWF0IjoxNTgwOTEwMzc4fQ.CI4zg7HB3TUgsxHiZOWCQzeHY76nfPl6jCQi831vW-w");
+            http.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse("Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjIiLCJuYmYiOjE1ODA5MTAzNzgsImV4cCI6MTU4MTUxNTE3OCwiaWF0IjoxNTgwOTEwMzc4fQ.CI4zg7HB3TUgsxHiZOWCQzeHY76nfPl6jCQi831vW-w");
         }
 
-        public async void createAsync(Client client)
+        public Task createAsync(Client client)
         {
-            var content = new StringContent(JsonConvert.SerializeObject(client), Encoding.UTF8, "application/json");
             string uri = string.Format(@"{0}/clients/auth", API);
-            var response = await http.PostAsync(uri, content);
-            //if (! response.IsSuccessStatusCode)
-            //{
-            //    Toast.MakeText(this, "Authentification requise", ToastLength.Long).Show();
-            //}
+            HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, uri);
+            request.Headers.Add("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjIiLCJuYmYiOjE1ODA5MTAzNzgsImV4cCI6MTU4MTUxNTE3OCwiaWF0IjoxNTgwOTEwMzc4fQ.CI4zg7HB3TUgsxHiZOWCQzeHY76nfPl6jCQi831vW-w");
 
+            request.Content = new StringContent(JsonConvert.SerializeObject(client), Encoding.UTF8, "application/json");
+            
+            var response = http.SendAsync(request).Result;
+            
+            return Task.CompletedTask;
         }
-        
 
         public async Task<Client> readAsync(long id)
         {
@@ -66,12 +68,12 @@ namespace Eni.Banque.Android.Services
             var response = await http.GetAsync(uri);
             if (response.IsSuccessStatusCode)
             {
+
                 var json = await response.Content.ReadAsStringAsync();
                 return JsonConvert.DeserializeObject<List<Client>>(json);
             }
             return new List<Client>();
         }
-
 
         public async Task<User> AuthAsync(User user)
         {
